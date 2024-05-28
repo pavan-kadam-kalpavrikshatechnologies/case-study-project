@@ -1,0 +1,52 @@
+<core:FragmentDefinition
+	xmlns="sap.m" xmlns:l="sap.ui.layout"
+	xmlns:f="sap.ui.layout.form"
+	xmlns:core="sap.ui.core"
+>
+	<Dialog
+		title="Product Details">
+       
+       <f:SimpleForm id="SimpleFormToolbar"
+			editable="true"
+			layout="ResponsiveGridLayout"
+			labelSpanXL="4"
+			labelSpanL="3"
+			labelSpanM="4"
+			labelSpanS="12"
+			adjustLabelSpan="false"
+			emptySpanXL="0"
+			emptySpanL="4"
+			emptySpanM="0"
+			emptySpanS="0"
+			columnsXL="2"
+			columnsL="1"
+			columnsM="1"
+			singleContainerFullSize="false"
+			ariaLabelledBy="Title1" >
+
+                        <Label text="Name" />
+                        <Input id="name2" placeholder="Name" />
+
+                        <Label text="City" />
+                        <Input id="City" placeholder="City" />
+
+                        <Label text="Street" />
+                        <Input id="Street" placeholder="Street" />
+
+                        <Label text="State" />
+                        <Input id="State" placeholder="State" />
+
+                        <Label text="ZipCode" />
+                        <Input id="ZipCode" placeholder="ZipCode" />
+
+                        <Label text="Country" />
+                        <Input id="Country" placeholder="Country" />
+
+                        
+                        <Button text="Close" press="updateSupplierClose" />
+                        <Button text="Save" press="updateSupplierSave" />
+
+    </f:SimpleForm>
+
+	</Dialog>
+</core:FragmentDefinition>

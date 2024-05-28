@@ -1,0 +1,62 @@
+<mvc:View
+    controllerName="sap.kt.caseproject.casestudyproject.controller.firstpage"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <FlexBox  justifyContent="End" direction="Row" >
+            <Button icon="sap-icon://cart-approval" press="OpenAddToCart" text="{i18n>cart}" class="btn" />
+            
+        </FlexBox>
+        <content>
+        
+            <SplitContainer id="SplitContDemo" initialDetail="detail" initialMaster="master">
+                <detailPages>
+                    <Page id="detail" title="{i18n>Products}" class="title"  >
+                        <List
+                            items="{product>/}"
+                            headerText=""
+                            mode="MultiSelect" selectionChange="handleAddToCart"
+                            growing="true"
+                            growingScrollToLoad="true">
+                            <ObjectListItem
+                                title="{product>Name}"
+                                press="handleAddToCart"
+                                number="{path: 'product>Price', formatter: '.Formatter.currency'}">
+                                <firstStatus>
+                                    <ObjectStatus
+                                        text="{= ${product>Available} ? 'Available' : 'Available'}"
+                                        state="{= ${product>Available} ? 'Error' : 'Success'}" />
+                                </firstStatus>
+                                <attributes>
+                                    <ObjectAttribute text="{product>Description}" />
+                                    <ObjectAttribute text="{path: 'product>ReleaseDate', formatter: '.Formatter.date'}" />
+                                    <ObjectAttribute text="Rating : {product>Rating}" />
+                                </attributes>
+                               
+                            </ObjectListItem>
+                        </List>
+
+                    </Page>
+                </detailPages>
+
+
+
+                <masterPages>
+                    <Page id="master" title="{i18n>Categories}" backgroundDesign="List" class="title" >
+                        <List items="{Categories>/}">
+                            <StandardListItem title="{Categories>Name}" type="Navigation" press="onPressGoToProduct" />
+                        </List>
+                    </Page>
+                </masterPages>
+            </SplitContainer>
+        </content>
+        <footer>
+				<Bar>
+							<contentRight>
+								<Button text="{i18n>logout}"  class="" press="Logout" ></Button>
+							</contentRight>
+						</Bar>
+					</footer>
+    </Page>
+</mvc:View>

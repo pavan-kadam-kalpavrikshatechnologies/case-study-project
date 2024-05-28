@@ -1,0 +1,52 @@
+<mvc:View controllerName="sap.kt.caseproject.casestudyproject.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns:f="sap.ui.layout.form"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        
+        <content>
+        
+
+          <f:SimpleForm id="SimpleFormToolbar"
+                editable="true"
+                layout="ResponsiveGridLayout"
+                labelSpanXL="4"
+                labelSpanL="3"
+                labelSpanM="4"
+                labelSpanS="12"
+                adjustLabelSpan="false"
+                emptySpanXL="0"
+                emptySpanL="4"
+                emptySpanM="0"
+                emptySpanS="0"
+                columnsXL="2"
+                columnsL="1"
+                columnsM="1"
+                singleContainerFullSize="false"
+                ariaLabelledBy="Title1">
+                <f:toolbar>
+                    <Toolbar id="TB1">
+                        <Title text="{i18n>login}" textAlign="Center" width="90%" />
+                    </Toolbar>
+                </f:toolbar>
+                <f:content>
+                    <Label text="{i18n>userId}" />
+                    <Input value="" placeholder="User Id" id="userId" change="validateUserId" required="true" />
+
+                    <Label text="{i18n>username}" />
+                    <Input value="" type="Text" placeholder="User Name" id="userName" change="validateUserName" required="true" />
+
+                    <Label text="{i18n>Captcha}" />
+                    <Input id="captcha1" placeholder="Enter Captcha" change="validateCaptcha" required="true" />
+
+                      <Label ></Label>
+                    <Text id="captcha2"  />
+                    <Button text="{i18n>refresh}" press="refreshCaptcha" />
+
+                    <Label ></Label>
+                    <Button text="{i18n>loginbtn}" press="onLoginPress" width="12rem" type="Emphasized" class="Login" />
+                </f:content>
+            </f:SimpleForm>
+        </content>
+    </Page>
+</mvc:View>

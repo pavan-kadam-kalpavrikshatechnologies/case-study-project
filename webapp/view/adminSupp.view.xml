@@ -1,0 +1,66 @@
+<mvc:View controllerName="sap.kt.caseproject.casestudyproject.controller.adminSupp"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns:m="sap.m"
+     xmlns:core="sap.ui.core"
+    xmlns:f="sap.ui.layout.form"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+       
+        <content>
+			<f:SimpleForm id="SimpleFormToolbar"
+			editable="true"
+			layout="ResponsiveGridLayout"
+			labelSpanXL="4"
+			labelSpanL="3"
+			labelSpanM="4"
+			labelSpanS="12"
+			adjustLabelSpan="false"
+			emptySpanXL="0"
+			emptySpanL="4"
+			emptySpanM="0"
+			emptySpanS="0"
+			columnsXL="2"
+			columnsL="1"
+			columnsM="1"
+			singleContainerFullSize="false"
+			ariaLabelledBy="Title1" >
+			<f:content items="path:'Suppliers>/'">
+                <Label text="{i18n>ID}"/>
+                 <Text text="{Suppliers>/ID}"/>
+                
+            <Label text="{i18n>Name}"/>
+            <Text text="{Suppliers>/Name}"/>
+
+            <Label text="{i18n>City}"/>
+            <Text text="{Suppliers>/Address/City}"></Text>
+            
+             <Label text="{i18n>Street}"/>
+            <Text text="{Suppliers>/Address/Street}"/> 
+
+             <Label text="{i18n>State}"/>
+            <Text text="{Suppliers>/Address/State}"/> 
+
+             <Label text="{i18n>ZipCode}"/>
+            <Text text="{Suppliers>/Address/ZipCode}"/>        
+
+             <Label text="{i18n>Country}"/>
+            <Text text="{Suppliers>/Address/Country}"/> 
+
+            <!-- <m:HBox>
+            <Button  icon="sap-icon://delete" press="OnDeleteSupplier" >
+            <customData>
+                <core:CustomData key="id" value="{Suppliers>/ID}" writeToDom="true"/>
+            </customData>
+            </Button>
+            
+            <Button icon="sap-icon://edit" press="OnUpdateSupplier">
+            <customData>
+                <core:CustomData key="id" value="{Suppliers>/ID}" writeToDom="true"/>
+            </customData>
+            </Button>
+        </m:HBox> -->
+			</f:content>
+		</f:SimpleForm>
+         </content>
+    </Page>
+</mvc:View>

@@ -1,0 +1,115 @@
+/* Enter your custom styles here */
+.btn {
+    margin-right: 70% !important;
+}
+#total {
+    margin-left: 70%;
+}
+.sapMText {
+    font-size: 15px;
+    color: #333333;
+}
+.sapMLabel {
+    font-size: 18px;
+    color: #666666;
+    margin-right: 8px;
+}
+.sapMBtnInner {
+    font-size: 18px;
+}
+/* Adjust the button style */
+.sapMBtnEmphasized {
+    background-color: #007bff;
+    border-color: #007bff;
+    color: #ffffff;
+}
+.sapMBtnEmphasized:active,
+.sapMBtnEmphasized:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+#vbox {
+    margin-top: 20% !important;
+}
+.sapUiSizeCompact  {
+    margin-left: 85% !important;
+}
+
+
+
+/* webapp/css/style.css */
+#SimpleFormToolbar {
+    background-color: #f9f9f9;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+#SimpleFormToolbar .sapMInputBase {
+    margin-bottom: 1rem;
+}
+
+#SimpleFormToolbar .sapMInputBaseInner {
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    padding: 0.5rem;
+}
+
+#SimpleFormToolbar .sapMBtn {
+    margin-top: 1rem;
+}
+
+#TB1 {
+    margin-bottom: 1rem;
+}
+
+#TB1 .sapMTitle {
+    color: #007bff;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.sapUiFormResGrid>div {
+    /* margin-left: 10%; */
+    margin: auto;
+    margin-top: 2%;
+    border: 2px solid black;
+}
+.Login{
+    margin-left: 27%;
+    margin-top: 10px;
+}
+.retuen{
+    margin-right: 88%;
+}
+.order{
+    margin-left: 93% !important;
+}
+
+.sapMListTbl {
+    width: 100%;
+    border-collapse: collapse;
+}
+.sapMTableTHead th, sapMListItems sapMTableTBody td {
+    border: 1px solid #dddddd !important;
+    padding: 8px;
+    text-align: left;
+}
+.sapMTableTHead th {
+    background-color: #f2f2f2 !important;
+    font-weight: bold;
+}
+.sapUiSizeCompact .sapMPageHeader .sapMIBar .sapMBarLeft{
+    justify-content: center;
+}
+.sapUiSizeCompact .sapMPageHeader .sapMIBar .sapMBarPH{
+    justify-content: center;
+
+}
+
+.sapUiSizeCompact .sapMListTblRow {
+    border: 2px solid black;
+}
+.sapMRbG{
+    display: flex;
+    justify-content: center;
+}

@@ -1,0 +1,193 @@
+{
+  "_version": "1.59.0",
+  "sap.app": {
+    "id": "sap.kt.caseproject.casestudyproject",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "applicationVersion": {
+      "version": "0.0.1"
+    },
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "resources": "resources.json",
+    "sourceTemplate": {
+      "id": "@sap/generator-fiori:basic",
+      "version": "1.13.3",
+      "toolsId": "aa80d3f1-aa87-4c4d-b23f-f0dc33124c64"
+    },
+    "dataSources": {
+      "mainService": {
+        "uri": "/V3/(S(inxyffycfbtzcfmgmc4yujla))/OData/OData.svc/",
+        "type": "OData",
+        "settings": {
+          "annotations": [],
+          "localUri": "localService/metadata.xml",
+          "odataVersion": "2.0"
+        }
+      }
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {
+      "icon": "",
+      "favIcon": "",
+      "phone": "",
+      "phone@2": "",
+      "tablet": "",
+      "tablet@2": ""
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+    "flexEnabled": true,
+    "dependencies": {
+      "minUI5Version": "1.123.1",
+      "libs": {
+        "sap.m": {},
+        "sap.ui.core": {},
+        "sap.f": {},
+        "sap.suite.ui.generic.template": {},
+        "sap.ui.comp": {},
+        "sap.ui.generic.app": {},
+        "sap.ui.table": {},
+        "sap.ushell": {}
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "sap.kt.caseproject.casestudyproject.i18n.i18n"
+        }
+      },
+      "": {
+        "dataSource": "mainService",
+        "preload": true,
+        "settings": {
+          "useBatch" : false
+        }
+      }
+    },
+    "resources": {
+      "css": [
+        {
+          "uri": "css/style.css"
+        }
+      ]
+    },
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "viewType": "XML",
+        "async": true,
+        "viewPath": "sap.kt.caseproject.casestudyproject.view",
+        "controlAggregation": "pages",
+        "controlId": "app",
+        "clearControlAggregation": false
+      },
+      "routes": [
+        {
+          "name": "RouteView1",
+          "pattern": ":?query:",
+          "target": [
+            "TargetView1"
+          ]
+        },
+        {
+          "name": "RouteView2",
+          "pattern": "firstpage",
+          "target": [
+            "Targetfirstpage"
+          ]
+        },
+        {
+          "name": "RouteView3",
+          "pattern": "addtocart",
+          "target": [
+            "Targetaddtocart"
+          ]
+        },
+        {
+          "name": "RouteView4",
+          "pattern": "orderpayment",
+          "target": [
+            "Targetorderpayment"
+          ]
+        },
+        {
+          "name": "RouteView5",
+          "pattern": "adminfirst",
+          "target": [
+            "Targetadminfirst"
+          ]
+        },
+        {
+          "name": "RouteView6",
+          "pattern": "adminSupp/{ID}",
+          "target": [
+            "TargetadminSupp"
+          ]
+        }
+      ],
+      "targets": {
+        "TargetView1": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "View1",
+          "viewName": "View1"
+        },
+        "Targetfirstpage": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "View2",
+          "viewName": "firstpage"
+        },
+        "Targetaddtocart": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "View3",
+          "viewName": "addtocart"
+        },
+        "Targetorderpayment": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "View4",
+          "viewName": "orderpayment"
+        },
+        "Targetadminfirst": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "View5",
+          "viewName": "adminfirst"
+        },
+        "TargetadminSupp": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "View6",
+          "viewName": "adminSupp"
+        }
+      }
+    },
+    "rootView": {
+      "viewName": "sap.kt.caseproject.casestudyproject.view.App",
+      "type": "XML",
+      "async": true,
+      "id": "App"
+    }
+  }
+}

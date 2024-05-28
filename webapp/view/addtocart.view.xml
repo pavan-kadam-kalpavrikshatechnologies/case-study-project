@@ -1,0 +1,54 @@
+<mvc:View controllerName="sap.kt.caseproject.casestudyproject.controller.addtocart"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m"
+    xmlns:m="sap.m">
+    <Page id="page" title="{i18n>title}">
+   <FlexBox  justifyContent="End" direction="Row" >
+    <Button text="{i18n>return}" icon="sap-icon://home"  class="retuen" press="ReturnToShop" ></Button>
+   
+   </FlexBox>
+        <content>
+            <m:Table id="cartTable" items="{path: 'addtocartModel>/'}">
+                <m:columns>
+                    <m:Column demandPopin="true" minScreenWidth="Tablet">
+                        <Text text="{i18n>ID}"/>
+                    </m:Column>
+                    <m:Column >
+                        <Text text="{i18n>Name}"/>
+                    </m:Column>
+                    <m:Column demandPopin="true" minScreenWidth="Tablet">
+                        <Text text="{i18n>description}"/>
+                    </m:Column>
+                    <m:Column demandPopin="true" minScreenWidth="Tablet">
+                        <Text text="{i18n>Rating}"/>
+                    </m:Column>
+                    <m:Column>
+                        <Text text="{i18n>Price}"/>
+                    </m:Column>
+                </m:columns>
+                <m:items>
+                    <m:ColumnListItem>
+                        <m:cells>
+                            <m:Text text="{addtocartModel>ID}"/>
+                            <m:Text text="{addtocartModel>Name}"/>
+                            <m:Text text="{addtocartModel>Description}"/>
+                            <m:RatingIndicator value="{addtocartModel>Rating}" maxValue="5" tooltip="Rating Tooltip" />
+                            <m:Text text="{path: 'addtocartModel>Price', formatter: '.Formatter.currency'}"/>
+                           
+                        </m:cells>
+                    </m:ColumnListItem>
+                   
+                </m:items>
+            </m:Table>
+
+        </content>
+                <footer  >
+						<Bar>
+							<contentRight>
+								 <Button type="Accept" text="{i18n>order}" class="order" press="onPressOrder" ariaDescribedBy="acceptButtonDescription genericButtonDescription"> </Button>
+								 <Button text="{i18n>logout}"  class="" press="Logout" ></Button>
+							</contentRight>
+						</Bar>
+					</footer>
+    </Page>
+</mvc:View>

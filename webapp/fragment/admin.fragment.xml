@@ -1,0 +1,42 @@
+<core:FragmentDefinition
+	xmlns="sap.m" xmlns:l="sap.ui.layout"
+	xmlns:f="sap.ui.layout.form"
+	xmlns:core="sap.ui.core"
+>
+	<Dialog
+		title="Product Details">
+                <f:SimpleForm id="SimpleFormToolbar"
+			editable="true"
+			layout="ResponsiveGridLayout"
+			labelSpanXL="4"
+			labelSpanL="3"
+			labelSpanM="4"
+			labelSpanS="12"
+			adjustLabelSpan="false"
+			emptySpanXL="0"
+			emptySpanL="4"
+			emptySpanM="0"
+			emptySpanS="0"
+			columnsXL="2"
+			columnsL="1"
+			columnsM="1"
+			singleContainerFullSize="false"
+			ariaLabelledBy="Title1" >
+                        <Label text="Name" />
+                        <Input value="" id="productsname" />
+
+                                <Label text="Description"/>
+                                <Input id="desc"></Input>
+
+                                <Label text="Price"/>
+                                <Input id="price"></Input>
+
+                                <Label text="Rating"/>
+                                <Input type="Number" id="rating"/>
+                                
+                                <Button text="Close" press="updateProductClose"  />
+                                <Button text="Save" press="updateProductSave"  />
+
+        </f:SimpleForm>
+	</Dialog>
+</core:FragmentDefinition>

@@ -1,0 +1,53 @@
+<mvc:View controllerName="sap.kt.caseproject.casestudyproject.controller.adminfirst"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+       
+        <content>
+			<SplitContainer
+			id="SplitContDemo"
+			initialDetail="detail"
+			initialMaster="master">
+			<detailPages>
+				<List
+					items="{product>/}"
+					headerText="{i18n>Products}"
+					mode="SingleSelectMaster"
+					growing="true"
+					id="myList"
+					growingScrollToLoad="true">
+					<CustomListItem>
+						<HBox>
+							<VBox class="sapUiSmallMarginBegin sapUiSmallMarginTopBottom" >
+								<Label  text="{product>ID}" />	
+								<Label  text="{product>Name}" />	
+								<Label  text="{product>Description}" />	
+								<Label  text="{product>ReleaseDate}" />	
+								<Label  text="{product>Rating}" />	
+								<Label  text="{product>Price}" />	
+							</VBox>
+						</HBox>
+						<Link text="{i18n>Suppliers}" press="goToSuppliers" ></Link>
+						<HBox >
+							<Button class="btn111" icon="sap-icon://delete" press="OnDeleteProduct" />
+							<Button class="btn111" icon="sap-icon://edit" press="OnUpdateProduct" />
+						</HBox>
+					</CustomListItem>
+				</List>
+				
+			
+		</detailPages>
+		<masterPages>
+			<Page
+				id="master"
+				title="{i18n>Categories}"
+				backgroundDesign= "List">
+				 <List id="idCatList" items="{Categories>/}">
+                    <StandardListItem title="{Categories>Name}" type="Navigation" press="onPressGoToAdminProduct" />
+                </List>
+			</Page>
+		</masterPages>
+	</SplitContainer>
+         </content>
+    </Page>
+</mvc:View>
