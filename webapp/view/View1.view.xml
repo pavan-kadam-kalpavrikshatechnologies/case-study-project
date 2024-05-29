@@ -5,7 +5,7 @@
     <Page id="page" title="{i18n>title}">
         
         <content>
-        
+        <Button text="add to cart"></Button>
 
           <f:SimpleForm id="SimpleFormToolbar"
                 editable="true"
